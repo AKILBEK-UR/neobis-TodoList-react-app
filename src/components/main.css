@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+html{
+  background-color: #efefef;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+}
+input{
+  border: 0;
+  outline: 0;
+}
+.todo__input{
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding-left: 1rem;
+  background-color:#efefef;
+}
+.todo{
+  height: 100%;
+  margin: 2rem auto;
+  padding: 0;
+  width: 50rem;
+}
+.todo__container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+h1{
+  margin: 1rem;
+  width: 100%;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+h2{
+  margin: 1rem;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.sub-title{
+  margin: 1rem;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #808080;
+}
+
+.input__activity{
+  margin: 1rem;
+}
+
+.input-box{
+  padding-left: 2rem;
+  font-size: 2rem;
+  width: 100%;
+  height: 6rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.add-todo__btn{
+  border-width: 0;
+  font-size: 2rem;
+  margin: 1rem;
+  background-color:#3a82ee;
+  box-shadow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+  border-radius: 1rem;
+  height: 6rem;
+  width: 100%;
+  font-weight:lighter;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+.add-todo__btn:hover{
+  background-color: rgba(5, 73, 176, 0.75);
+}
