@@ -3,31 +3,35 @@
   padding: 0;
   margin: 0;
 }
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-html{
+html {
   background-color: #efefef;
   font-style: normal;
   font-family: "Montserrat", sans-serif;
   font-size: 10px;
 }
-input{
+
+input {
   border: 0;
   outline: 0;
+  font-family: "Montserrat", sans-serif;
 }
-.todo__input{
+
+.todo__input {
   font-size: 2.5rem;
   font-weight: 700;
   padding-left: 1rem;
-  background-color:#efefef;
+  background-color: #efefef;
 }
-.todo{
+
+.todo {
   height: 100%;
   margin: 2rem auto;
   padding: 0;
   width: 50rem;
 }
-.todo__container{
+
+.todo__container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -35,27 +39,37 @@ input{
   flex-direction: column;
   row-gap: 1rem;
 }
-h1{
+
+h1 {
   width: 100%;
   font-weight: 800;
   font-size: 2.5rem;
 }
-h2{
+
+h2 {
   width: 100%;
   font-weight: 700;
   font-size: 1.6rem;
 }
-.sub-title{
+
+.sub-title {
   margin-bottom: 1rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #808080;
 }
 
-.input-box{
-  padding-left: 2rem;
+.l1 {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  color: #808080;
+  font-weight: 700;
+}
+
+.input-box {
+  padding-left: 1rem;
   font-size: 2rem;
   width: 100%;
   height: 6rem;
@@ -63,39 +77,39 @@ h2{
   border-radius: 1rem;
 }
 
-.add-todo__btn{
+.add-todo__btn {
   margin-top: 2rem;
   border-width: 0;
   font-size: 2rem;
-  background-color:#3a82ee;
+  background-color: #3a82ee;
   box-shadow: 0px 0px 4px rgba(58, 130, 238, 0.75);
   border-radius: 1rem;
   height: 6rem;
   width: 100%;
-  font-weight:lighter;
+  font-family: "Montserrat", sans-serif;
   color: #ffffff;
-  cursor: pointer;
   transition: 0.2s ease-out;
 }
-.add-todo__btn:hover{
+
+.add-todo__btn:hover {
   background-color: rgba(5, 73, 176, 0.75);
 }
 
-
-.todo__category{
+.todo__category {
   width: 100%;
   height: 16rem;
   display: flex;
   flex-direction: column;
 }
-.radio-btn__wrapper{
+
+.radio-btn__wrapper {
   display: flex;
   flex-direction: row;
   height: 100%;
   column-gap: 1.5rem;
-  
 }
-.radio-btn{
+
+.radio-btn {
   background-color: #ffffff;
   border-radius: 1rem;
   width: 100%;
@@ -104,7 +118,9 @@ h2{
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  font-size: 1.6rem;
 }
+
 input[type="radio"],
 input[type="checkbox"] {
   display: none;
@@ -114,12 +130,13 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25px;
-  height: 25px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   border: 2px solid #3174da;
   box-shadow: 0px 0px 4px rgba(27, 118, 255, 0.75);
 }
+
 .radio::after {
   content: "";
   display: block;
@@ -128,29 +145,32 @@ input[type="checkbox"] {
   height: 0px;
   background-color: #3174da;
   box-shadow: 0px 0px 4px rgba(27, 118, 255, 0.75);
-  border-radius: 999px;
+  border-radius: 99.9rem;
 }
+
 .radio.personal {
   border-color: #f82ca3;
   box-shadow: 0px 0px 4px rgba(234, 64, 164, 0.75);
 }
+
 .radio.personal::after {
   background-color: #f82ca3;
   border-color: #f82ca3;
   box-shadow: 0px 0px 4px rgba(234, 64, 164, 0.75);
 }
+
 input:checked ~ .radio::after {
-  width: 15px;
-  height: 15px;
+  width: 1.5rem;
+  height: 1.5rem;
   opacity: 1;
 }
 
-li{
+li {
   margin-top: 1rem;
   row-gap: 1rem;
   list-style: none;
   width: 100%;
-  height: 5rem;
+  height: 6rem;
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
@@ -159,63 +179,78 @@ li{
   align-items: center;
   border-radius: 1rem;
 }
-.input-text{
+
+.input-text {
+  font-size: 2rem;
   width: 60%;
 }
-.edit-btn{
+
+.edit-btn {
   width: 4rem;
-  height: 2.5rem;
+  height: 3rem;
   background-color: rgb(163, 50, 154);
   border-width: 0;
   border-radius: 0.2rem;
   color: #ffffff;
 }
-button{
+
+button {
   cursor: pointer;
+  transition: transform 0.5s ease;
 }
-.delete-btn{
+
+button:active {
+  transform: scale(0.8);
+}
+
+.delete-btn {
   width: 6rem;
   background-color: rgb(255, 77, 77);
   border-radius: 0.2rem;
   border-width: 0;
-  height: 2.5rem;
+  height: 3rem;
   color: #ffffff;
 }
+
 .completed .input-text {
   text-decoration: line-through;
   color: #747474;
 }
 
-
 .checkbox {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 25px;
-  min-height: 25px;
-  width: 25px;
-  height: 25px;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   border: 2px solid #3174da;
   cursor: pointer;
 }
+
 .checkbox::after {
   transition: 0.2s ease-in-out;
   content: "";
-  width: 15px;
-  height: 15px;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
 }
+
 .business .checkbox {
   box-shadow: 0px 0px 4px rgba(27, 118, 255, 0.75);
 }
+
 .personal .checkbox {
   border: 2px solid #f82ca3;
   box-shadow: 0px 0px 4px rgba(234, 64, 164, 0.75);
 }
+
 .personal.completed .checkbox {
   border: 2px solid #f82ca3;
 }
+
 .checkbox input {
   opacity: 0;
   width: 0;
@@ -223,9 +258,50 @@ button{
   pointer-events: none;
   display: none;
 }
+
 .business.completed .checkbox::after {
   background-color: #3174da;
 }
+
 .personal.completed .checkbox::after {
   background-color: #f82ca3;
+}
+
+
+@media (max-width: 480px) {
+  html {
+    font-size: 10px;
+    margin: 2rem;
+  }
+  .todo {
+    width: 100%; 
+  }
+  input::placeholder{
+    font-size: 2rem;
+  }
+  .todo__input{
+    width: 20rem;
+  }
+  .add-todo__btn, .input-box, .input-text, .edit-btn, .delete-btn {
+    font-size: 1.6rem; 
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+
+  }
+  h2, .sub-title, .l1 {
+    font-size: 2rem;
+    width: max-content;
+  }
+  .radio-btn {
+    font-size: 1.5rem;
+  }
+  li {
+    height: auto; 
+    height: 5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
 }

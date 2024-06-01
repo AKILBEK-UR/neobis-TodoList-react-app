@@ -13,7 +13,7 @@ export default function TodoForm({addTodo,inputValue,setInputValue, category, se
   return (
     <div>
         <form onSubmit={handleSubmit}>
-          <h2>CREATE A TODO</h2>
+          <h2>Create a todo</h2>
           <p className="sub-title">Whats on your todo list?</p>
 
           <label className="input__activity">
@@ -56,7 +56,7 @@ export default function TodoForm({addTodo,inputValue,setInputValue, category, se
           </div>
         </div>
         <button className="add-todo__btn" onClick={addTodo}>
-          ADD TODO
+          Add todo
         </button>
         </form>
     </div>
