@@ -7,12 +7,12 @@ import TodoCreate from "./TodoCreate";
 export default function TodoItem(){
     const [todos, setTodos] = useState([]);
     const [inputValue, setInputValue] = useState("");
-    const [category, setCategory] = useState("business"); 
+    const [category, setCategory] = useState("business");
 
     function addTodo(){
         const newTodo = [...todos,
             {
-              id: Date.now().toString,
+              id: Date.now(),
               todo: inputValue,
               category,
               done: false,
@@ -25,7 +25,7 @@ export default function TodoItem(){
 
     function deleteTodo(id){
         let newTodos = todos.filter((index) => {
-            return index.id = !id;
+            return index.id !== id;
         })
         setTodos(newTodos);
     }
@@ -34,12 +34,14 @@ export default function TodoItem(){
         const index = todos.findIndex((index) => index.id === id);
         const newTasks = [...todos];
         newTasks[index].done = !newTasks[index].done;
+        setTodos(newTasks);
     }
 
     function editTodo(id, text) {
         const index = todos.findIndex((index) => index.id === id);
         const newTasks = [...todos];
         newTasks[index].todo = text;
+        setTodos(newTasks);
     }
 
     return (

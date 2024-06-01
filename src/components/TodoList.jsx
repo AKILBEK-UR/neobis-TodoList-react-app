@@ -25,6 +25,6 @@ export default function TodoList({todos,setInputValue,deleteTodo, completeTodo, 
             <button className="delete-btn" onClick={() => deleteTodo(todos.id)}>
                 Delete
             </button>
-    </li>
+        </li>
     );
 }

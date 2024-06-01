@@ -29,7 +29,7 @@ export default function TodoForm({addTodo,inputValue,setInputValue, category, se
         </label>
 
         <div className="todo__category">
-          <p className="subtitle">Pick a category</p>
+          <p className="sub-title">Pick a category</p>
           <div className="radio-btn__wrapper">
             <label className="radio-btn">
               <input
@@ -55,8 +55,6 @@ export default function TodoForm({addTodo,inputValue,setInputValue, category, se
             </label>
           </div>
         </div>
-
-
         <button className="add-todo__btn" onClick={addTodo}>
           ADD TODO
         </button>
