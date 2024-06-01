@@ -1,21 +1,23 @@
-import React, {useState} from "react";
+import React from "react";
 import "./main.css";
 import TodoList from "./TodoList";
 
 
-export default function TodoCreate({ todos, setInputValue, deleteTodo}){
+export default function TodoCreate({ todos, setInputValue, deleteTodo, completeTodo, editTodo}){
 
 
     return (
         <ul id="todo-list" className="list">
         {todos
         // .filter((el) => el.category === category)
-        .map((task) => (
+        .map((todos) => (
           <TodoList
-            key={task.id}
-            task={task}
-            deleteTodo={deleteTodo}
+            key={todos.id}
+            todos={todos}  
             setInputValue={setInputValue}
+            deleteTodo={deleteTodo}
+            completeTodo ={completeTodo}
+            editTodo = {editTodo}
           />
         ))}
     </ul>

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./main.css";
-export default function TodoForm({addTodo,inputValue,setInputValue}){
+
+export default function TodoForm({addTodo,inputValue,setInputValue, category, setCategory}){
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -27,14 +28,39 @@ export default function TodoForm({addTodo,inputValue,setInputValue}){
           />
         </label>
 
+        <div className="todo__category">
+          <p className="subtitle">Pick a category</p>
+          <div className="radio-btn__wrapper">
+            <label className="radio-btn">
+              <input
+                className="radio-category radio"
+                type="radio"
+                name="category"
+                checked={category === "business"}
+                onChange={(e) => setCategory("business")}
+              />
+              <span className="business radio"></span>
+              <p>Business</p>
+            </label>
+            <label className="radio-btn">
+              <input
+                className="radio-category radio"
+                type="radio"
+                name="category"
+                checked={category === "personal"}
+                onChange={(e) => setCategory("personal")}
+              />
+              <span className="personal radio"></span>
+              <p>Personal</p>
+            </label>
+          </div>
+        </div>
+
 
         <button className="add-todo__btn" onClick={addTodo}>
           ADD TODO
         </button>
         </form>
-
-
-
     </div>
   )
 }
