@@ -31,8 +31,8 @@ Add functionality to mark a task as completed. Once marked, a checkmark should a
 
 ### Installation
 
-1. Clone the repository: `git clone https://github.com/Myrzaim/neobis-front-todoList-react.git`
-2. Navigate to the project folder: `cd neobis-front-todoList-react`
+1. Clone the repository: `git clone https://github.com/AKILBEK-UR/neobis-TodoList-react-app.git`
+2. Navigate to the project folder: `cd neobis-TodoList-react-app`
 3. Install dependencies: `npm install` or `yarn install`
 4. Start the application: `npm start` or `yarn start`
 
@@ -52,4 +52,4 @@ This TODO APPLICATION was created by Akilbek during an internship at Neobis club
 
 ### Contact:
 
-- **Email**:akilbekurinbaev0616@gmail.com
+- **Email**: akilbekurinbaev0616@gmail.com
